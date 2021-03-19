@@ -1,0 +1,53 @@
+<div class="container-blocos">
+  <mat-card class="button-card-right">
+    <button mat-flat-button color="accent" [routerLink]="['/cursos']"><mat-icon>list</mat-icon>Voltar</button>
+  </mat-card>
+</div>
+
+<div class="container-blocos">
+  <mat-card>
+    <span id="titulo-view">Adicionar Novo Curso</span>
+  </mat-card>
+</div>
+
+<div class="container-blocos">
+  <form [formGroup]="cursoForm" (ngSubmit)="addCurso(cursoForm.value)">
+    <mat-card class="container-blocos">
+      <mat-form-field class="example-full-width">
+        <textarea matInput name="descricaoAssunto" placeholder="Descrição do Assunto" formControlName="descricaoAssunto"></textarea>
+      </mat-form-field>  
+
+      <mat-form-field appearance="fill" class="example-full-width">
+        <mat-label>Data de Início</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="dataInicio" name="dataInicio" >
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill" class="example-full-width">
+        <mat-label>Data de Término</mat-label>
+        <input matInput [matDatepicker]="picker1" formControlName="dataTermino" name="dataTermino" >
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+  
+      <mat-form-field class="example-full-width">
+        <input matInput type="number" name="quantidadeAlunosTurma" placeholder="Quantidade de Alunos por Turma" formControlName="quantidadeAlunosTurma">
+      </mat-form-field>
+  
+      <div>
+        <mat-form-field class="width-campo-codigo component-margin-right">
+          <input matInput name="codigoCategoria" placeholder="Categoria" formControlName="codigoCategoria" [readonly]="true">
+        </mat-form-field>
+        <mat-form-field class="width-campo-50 component-margin-right">
+          <input matInput name="descricaoCategoria" formControlName="descricaoCategoria" [readonly]="true">
+        </mat-form-field>
+        <button class="component-margin-right" color="accent" mat-raised-button type="button" (click)="openDialog()"><mat-icon>search</mat-icon></button>
+      </div>
+    </mat-card>
+
+    <mat-card class="button-card-right">
+      <button mat-flat-button type="submit" [disabled]="!cursoForm.valid" color="primary">Adicionar</button>
+    </mat-card>
+  </form>
+</div>

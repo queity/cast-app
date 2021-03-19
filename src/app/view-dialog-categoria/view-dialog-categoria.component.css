@@ -1,0 +1,32 @@
+.container-blocos {
+  margin-bottom: 8px;
+}
+
+.mat-header-cell {
+  padding: 12px 12px 12px 12px;
+  text-align: center;
+}
+
+.mat-cell {
+  padding: 12px 12px 12px 12px;
+  text-align: center;
+}
+
+.mat-column-descricao {
+  width: 100%;
+}
+
+.button-card-right {
+  text-align: right;
+}
+
+button.mat-selecao {
+  background-color: #5cb6ff;
+}
+
+.map-card-title-filtro {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  margin-bottom: 20px;
+  border-bottom-color: dimgray;
+}

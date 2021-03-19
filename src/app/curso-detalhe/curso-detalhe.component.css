@@ -1,0 +1,30 @@
+.mat-flat-button {
+    margin-left: 4px;
+    margin-bottom: 4px;
+}
+
+.container-blocos {
+    margin-bottom: 8px;
+}
+
+.button-card-right {
+    text-align: right;
+}
+
+.icone-visualizar-tam {
+    font-size: 48px;
+}
+
+.map-card-title-filtro {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    margin-bottom: 20px;
+    border-bottom-color: dimgray;
+}
+
+#badge-tarefa-icon > span {
+    width: fit-content;
+    left: -39px;
+    top: -1px;
+    background: #3980a2;
+}

@@ -1,0 +1,25 @@
+<div class="example-container mat-elevation-z8 container-blocos">
+    <div class="example-loading-shade"
+         *ngIf="isLoadingResults">
+      <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+    </div>
+    <div class="button-row container-blocos">
+      <mat-card class="button-card-right">
+        <button mat-flat-button color="accent" [routerLink]="['/categorias']"><mat-icon>list</mat-icon> Voltar </button>
+      </mat-card>
+    </div>
+    <mat-card class="example-card">
+      <mat-card-header >
+        <div mat-card-avatar>
+          <mat-icon class="icone-visualizar-tam">
+            layers
+            <span id="badge-tarefa-icon" matBadge="categoria" matBadgePosition="before"></span>
+          </mat-icon>
+        </div>
+        <mat-card-title> {{categoria.descricao}} </mat-card-title>
+        <mat-card-subtitle>
+          Código {{categoria.codigo}}
+        </mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+</div>

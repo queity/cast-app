@@ -1,0 +1,15 @@
+<div>
+    <h3>Adicionar Nova Categoria</h3>
+  </div>
+  <form class="example-form" [formGroup]="categoriaForm" (ngSubmit)="addCategoria(categoriaForm.value)">
+    
+    <mat-form-field class="example-full-width">
+        <input matInput name="codigo" placeholder="Código" formControlName="codigo">
+    </mat-form-field>
+    
+    <mat-form-field class="example-full-width">
+        <textarea matInput name="descricao" placeholder="Descrição" formControlName="descricao"></textarea>
+    </mat-form-field>
+  
+    <button mat-flat-button type="submit" [disabled]="!categoriaForm.valid" color="primary" >Adicionar</button>
+</form>

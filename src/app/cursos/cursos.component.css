@@ -1,0 +1,49 @@
+.mat-header-cell {
+    padding: 12px 12px 12px 12px;
+    text-align: center;
+}
+
+.mat-cell {
+    padding: 12px 12px 12px 12px;
+    text-align: center;
+}
+
+.mat-flat-button {
+    margin-left: 4px;
+    margin-bottom: 4px;
+}
+
+.example-full-width {
+    width: 40%;
+}
+
+button.mat-edit {
+    background-color: #ff4081;
+}
+
+button.mat-visualizar {
+    background-color: #5cb6ff;
+}
+
+.mat-column-descricaoAssunto {
+    width: 50%;
+}
+
+.container-blocos {
+    margin-bottom: 8px;
+}
+
+.button-mini-column-acao {
+    margin-right: 4px;
+}
+
+.map-card-title-filtro {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    margin-bottom: 20px;
+    border-bottom-color: dimgray;
+}
+
+.button-card-right {
+    text-align: right;
+}

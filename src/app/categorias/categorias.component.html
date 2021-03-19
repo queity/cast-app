@@ -1,0 +1,54 @@
+<div class="container-blocos">
+  <mat-card class="button-card-right">
+    <button mat-flat-button color="accent" routerLink="/categoria-novo"><mat-icon>add_circle</mat-icon> Cadastrar</button>
+  </mat-card>
+</div>
+
+<div class="container-blocos">
+  <mat-card class="example-card">
+    <mat-card-header class="map-card-title-filtro">
+      <mat-card-title>Lista de Categorias</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="example-form" [formGroup]="form" (ngSubmit)="categoriaPorFiltro(form.value)">
+        <mat-form-field class="example-full-width">
+          <mat-label>Descrição</mat-label>
+          <input matInput name="descricao" formControlName="descricao">
+        </mat-form-field>
+        <button mat-flat-button type="submit" color="primary" ><mat-icon>search</mat-icon>Pesquisar</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div class="mat-elevation-z8 container-blocos">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+    <!-- Ações Column -->
+    <ng-container matColumnDef="acao">
+      <th mat-header-cell *matHeaderCellDef> Ações </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-mini-fab matTooltip="Visualizar" class="mat-visualizar button-mini-column-acao" routerLink="/categoria-detalhe/{{element.idCategoria}}" selected><mat-icon>manage_search</mat-icon></button>
+        <button mat-mini-fab matTooltip="Editar" class="mat-edit button-mini-column-acao" routerLink="/categoria-editar/{{element.idCategoria}}" selected><mat-icon>edit</mat-icon></button>
+        <button mat-mini-fab matTooltip="Excluir" class="button-mini-column-acao" color="warn" (click)="deleteCategoria(element.idCategoria)" selected><mat-icon>delete</mat-icon></button>
+      </td>
+    </ng-container>    
+
+    <!-- Codigo Column -->      
+    <ng-container matColumnDef="codigo">
+      <th mat-header-cell *matHeaderCellDef> Código </th>
+      <td mat-cell *matCellDef="let element"> {{element.codigo}} </td>
+    </ng-container>
+  
+    <!-- Descricao Column -->
+    <ng-container matColumnDef="descricao">
+      <th mat-header-cell *matHeaderCellDef> Descrição </th>
+      <td mat-cell *matCellDef="let element"> {{element.descricao}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
+  </table>
+
+</div>

@@ -1,0 +1,39 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+  
+.example-full-width {
+    width: 100%;
+}
+
+.width-campo-50 {
+    width: 50%;
+}
+
+.width-campo-codigo {
+    width: 10%;
+}
+
+.mat-flat-button {
+    margin-left: 4px;
+    margin-bottom: 4px;
+}
+
+.container-blocos {
+    margin-bottom: 8px;
+}
+
+.button-card-right {
+    text-align: right;
+}
+
+#titulo-view {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.component-margin-right {
+    margin-right: 8px;
+}

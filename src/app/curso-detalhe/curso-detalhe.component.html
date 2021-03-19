@@ -1,0 +1,50 @@
+<div class="example-container mat-elevation-z8 container-blocos">
+    <div class="example-loading-shade"
+         *ngIf="isLoadingResults">
+      <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+    </div>
+    <div class="button-row container-blocos">
+      <mat-card class="button-card-right">
+        <button mat-flat-button color="accent" [routerLink]="['/cursos']"><mat-icon>list</mat-icon> Voltar </button>
+      </mat-card>
+    </div>
+    <mat-card class="example-card">
+      <mat-card-header class="map-card-title-filtro">
+        <div mat-card-avatar>
+          <mat-icon class="icone-visualizar-tam">
+            layers
+            <span id="badge-tarefa-icon" matBadge="curso" matBadgePosition="before"></span>
+          </mat-icon>
+        </div>
+        <mat-card-title> {{curso.descricaoAssunto}} </mat-card-title>
+        <mat-card-subtitle>
+          <span matTooltip="CATEGORIA CÓDIGO {{curso.codigoCategoria}}" matBadge="{{curso.codigoCategoria}}" matBadgePosition="above after" matBadgeOverlap="false">
+            Categoria [ {{curso.descricaoCategoria}} ]
+          </span>
+        </mat-card-subtitle>
+      </mat-card-header>
+      
+      <mat-card-content>
+        <p>
+          <mat-form-field class="example-full-width">
+            <mat-label>Data de Início</mat-label>
+            <input matInput disabled value="{{curso.dataInicio | date: 'dd/MM/yyyy'}}">
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field class="example-full-width">
+            <mat-label>Data de Término</mat-label>
+            <input matInput disabled value="{{curso.dataTermino | date: 'dd/MM/yyyy'}}">
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field class="example-full-width">
+            <mat-label>Quantidade de Alunos por Turma</mat-label>
+            <input matInput disabled value="{{curso.quantidadeAlunosTurma}}">
+          </mat-form-field>
+        </p>
+      </mat-card-content>
+    </mat-card>
+</div>

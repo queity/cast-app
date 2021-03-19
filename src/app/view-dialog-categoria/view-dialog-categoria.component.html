@@ -1,0 +1,39 @@
+<div class="container-blocos">
+  <mat-card class="example-card">
+    <mat-card-header class="map-card-title-filtro">
+      <mat-card-title>Categorias</mat-card-title>
+    </mat-card-header>
+  </mat-card>
+</div>
+
+<div class="mat-elevation-z8 container-blocos">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      
+      <ng-container matColumnDef="acao">
+        <th mat-header-cell *matHeaderCellDef> Ações </th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-mini-fab class="mat-selecao" matTooltip="Selecionar" [mat-dialog-close]="element" cdkFocusInitial><mat-icon>check</mat-icon></button>
+        </td>
+      </ng-container>    
+    
+      <ng-container matColumnDef="codigo">
+        <th mat-header-cell *matHeaderCellDef> Código </th>
+        <td mat-cell *matCellDef="let element"> {{element.codigo}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="descricao">
+        <th mat-header-cell *matHeaderCellDef> Descrição </th>
+        <td mat-cell *matCellDef="let element"> {{element.descricao}} </td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        
+    </table>
+</div>
+
+<div>
+  <mat-card class="button-card-right">
+    <button mat-raised-button (click)="onNoClick()" color="accent">Fechar</button>
+  </mat-card>
+</div>
